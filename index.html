@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería Interestelar</title>
+    <link rel="stylesheet" href="./fondos.css">
+    <link rel="stylesheet" href="./colores.css">
+    <link rel="stylesheet" href="./textos.css">    
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color:#f1f1f1;
+        }
+    
+        /* Estilo de header */
+        header {
+            background-color: #170089;
+            padding: 10px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+    
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+        width: 100%;
+        padding: 1px;
+        /* only for demonstration, should be removed */
+        background: #ffbfe7;
+        text-align: center;
+        }
+        nav a{
+            text-decoration:none;
+            color:inherit;
+            font-size:14px;
+        } 
+        nav li{
+            display:inline-block;
+            width:10%;
+            padding:5px 10px;
+            background-color:#170089;
+            border:1px solid #170089;
+            text-align:center;
+            color:#f1f1f1;
+        }
+        nav li:hover{
+            background-color:#f1f1f1;
+            color:#170089;
+        }
+   
+        article {
+            color: #170089;
+            padding: 20px;
+            width: 100%;
+            background-color: #f1f1f1;
+            height: 1700px;
+        }
+    
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    
+        /* Estilo de footer */
+        footer {
+            background-color: #170089;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    
+        /* Responsive layout */
+        @media (max-width: 600px) {
+    
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h2><img src="./imágenes/Pastelería Interestelar.JPG" alt="Pastelería Interestelar" height="180"></h2>
+    </header>
+
+    <section>
+        <nav><ul>
+            <li><a href="./Pastelería Interestelar.html">Inicio</a></li>
+            <li><a href="./Pedido.html">Pedido</a></li>
+            <li><a href="./Inventario.html">Inventario</a></li>  
+        </ul>     
+        </nav>
+
+        <article>
+            <table align="center">
+                <!--Trufas interplanetarias-->
+                <tr>
+                    <td>
+                        <dl>
+                            <h2>Trufas interplanetarias. . . . . . . . . . . . . . . . . .$15 C/U</h2>
+                            <dd>Trufas especiales de chocolate decoradas con un diseño<br>
+                            planetario tan único como sus rellenos</dd>
+                            
+                        </dl>
+                    </td>              
+                </tr>
+                <tr>
+                    <th>
+                        <img src="https://i.imgur.com/AKgZ5e7.jpeg" alt="Trufas interplanetarias" width="200" height="180">
+                    </th>
+                </tr>
+                <!--Cupcakes de Nebulosa-->
+                <tr>
+                    <td>
+                        <dl>
+                            <h2>Cupcakes de Nebulosa. . . . . . . . . . . . . . . . . .$30 C/U</h2>
+                            <dd>Cupcakes de chocolate amargo rellenos con diferentes sabores<br>
+                            frutales, con una cobertura colorida y brillante de crema.</dd>
+                            
+                        </dl>
+                    </td>              
+                </tr>
+                <tr>
+                    <th>
+                        <img src="https://i.imgur.com/vs1Z9cW.jpeg" alt="Cupcakes de nebulosa" width="200" height="180">
+                    </th>
+                </tr>
+                <!--Cupcake Galaxia-->
+                <tr>
+                    <td>
+                        <dl>
+                            <h2>Cupcakes de Galaxia. . . . . . . . . . . . . . . . . . . . . . .$40 C/U</h2>
+                            <dd>Pequeños bocados de sabor de otro mundo. Agregamos algunos<br>
+                            aderezos para que sea un bocado lleno de sabor. </dd>
+                            
+                        </dl>
+                    </td>              
+                </tr>
+                <tr>
+                    <th>
+                        <img src="https://i.imgur.com/vCc9GSC.jpeg" alt="Pastel de Constelaciones" width="200" height="150">
+                    </th>
+                </tr>                
+                <!--Pastel constelaciones-->
+                <tr>
+                    <td>
+                        <dl>
+                            <h2>Pastel Constelación. . . . . . . . . . . . . . . . . .$400</h2>
+                            <dd>El pastel que nos lanzó a la fama. Es tan hermoso que da pena<br>
+                            comerlo. Pero no podrás resistir la tentación de esta delicia <br>
+                            de chocolate.</dd>
+                            
+                        </dl>
+                    </td>              
+                </tr>
+                <tr>
+                    <th>
+                        <img src="https://i.imgur.com/6N6piTD.jpeg" alt="Pastel de Constelaciones" width="200" height="180">
+                    </th>
+                </tr>
+                <!--Covertura-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <h2>Coverturas</h2>
+                                <li>Buttercream</li>
+                                <li>Queso Crema</li>
+                                <li>Fondant</li>
+                                <li>Glasa real</li>
+                                <li>Vegana</li>                                
+                            </ul>
+                        </td>              
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="https://i.imgur.com/6vOCxZV.jpeg" alt="Coverturas" width="200" height="180">
+                        </th>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </article>
+
+        <footer>
+            <table align="center">
+                <tr>                        
+                    <td>Calle del Panadero 14, Col. Molinos, CDMX</td> <br>
+                </tr>
+                <tr>
+                    <td> Tel. (55) 1234 1234</td>
+                </tr>
+                <tr>
+                    <td> Lunes a Sábado <br>
+                    9:00am a 8:00pm</td>
+                </tr>        
+        </table>
+        </footer>
+        
+    </section>
+
+    
+
+</body>
+
+</html>
