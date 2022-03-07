@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería Interestelar</title>
+    <link rel="stylesheet" href="./fondos.css">
+    <link rel="stylesheet" href="./colores.css">
+    <link rel="stylesheet" href="./textos.css"> 
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color:#170089;
+        }
+    
+        /* Estilo de header */
+        header {
+            background-color: #170089;
+            padding: 10px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+    
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+        width: 100%;
+        padding: 1px;
+        /* only for demonstration, should be removed */
+        background: #ffbfe7;
+        text-align: center;
+        }
+        nav a{
+            text-decoration:none;
+            color:inherit;
+            font-size:14px;
+        } 
+        nav li{
+            display:inline-block;
+            width:10%;
+            padding:5px 10px;
+            background-color:#170089;
+            border:1px solid #170089;
+            text-align:center;
+            color:#f1f1f1;
+        }
+        nav li:hover{
+            background-color:#f1f1f1;
+            color:#170089;
+        }
+   
+        article {
+            color: #170089;
+            padding: 20px;
+            width: 100%;
+            background-color: #f1f1f1;
+            height: 800px;
+        }
+    
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    
+        /* Estilo de footer */
+        footer {
+            background-color: #170089;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    
+        /* Responsive layout */
+        @media (max-width: 600px) {
+    
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h2><img src="https://raw.githubusercontent.com/FelipeCamarena/FrontEnd-Mission_Pasteleria.github.io/main/im%C3%A1genes/tu%20pedido.JPG" alt="Tu Pedido" width="310" height="180"></h2>
+    </header>
+
+    <section>
+        <nav><ul>
+            <li><a href="./Pastelería Interestelar.html">Inicio</a></li>
+            <li><a href="./Pedido.html">Pedido</a></li>
+            <li><a href="./Inventario.html">Inventario</a></li>  
+            </ul>     
+        </nav>
+
+        <article>         
+            <form action="/accion.js" id="form1" method="post">
+                <div align="center">
+                    <!-- Nombre -->
+                        <br>
+                        <label class="negritas" for="Input1"> Nombre Galáctico</label><br>
+                        <input type="text" placeholder="Ingresa tu nombre" id="Input1" name="Input1"><br><br>
+                    <!-- Correo -->
+                        <label class="negritas" for="correo1">Correo electrónico</label><br>
+                        <input type="email" placeholder="ejemplo@email.com" id="correo1" name="correo1"><br><br>
+                    <!-- teléfono -->
+                    <label class="negritas" for="tel1">Número telefónico</label><br>
+                    <input type="tel" placeholder="Teléfono a 10 dígitos" id="tel1" name="tel1" maxlength="10"><br><br>
+                    <!-- Pastel -->
+                    <label class="negritas" for="pastel">¿Qué pastel quieres?</label><br>
+                    <select id="pastel" name="pastel">
+                        <option value="default">Ninguno</option>
+                        <option value="Trufas">Trufas interplanetarias</option>
+                        <option value="Nebulosa">Cupcake Nebulosa</option>
+                        <option value="Galaxia">Cupcake Galaxia</option>
+                        <option value="Constelación">Pastel Constelación</option>
+                    </select><br><br>
+                    <!-- cantidad -->
+                    <label class="negritas" for="numero1">¿Cuántos quieres?</label><br>
+                    <input type="number" placeholder="Ingresa una cantidad" id="numero1" name="numero1"><br><br>
+                    <!-- Covertura -->
+                    <label class="negritas" for="cobertura">Elige una cobertura</label><br>
+                        <input type="radio" id="Buttercream" name="coverturas" value="Buttercream">
+                        <label for="Buttercream">Buttercream</label><br>
+                        <input type="radio" id="Queso crema" name="coverturas" value="Queso crema">
+                        <label for="Queso crema">Queso crema</label><br>
+                        <input type="radio" id="Fondant" name="coverturas" value="Fondant">
+                        <label for="Fondant">Fondant</label><br>
+                        <input type="radio" id="Glasa real" name="coverturas" value="Glasa real">
+                        <label for="Glasa real">Glasa real</label><br>
+                        <input type="radio" id="Vegana" name="coverturas" value="Vegana">
+                        <label for="Vegana">Vegana</label><br><br>
+                    <!--información adicional-->
+                    <label class="negritas" for="inf adicional">Información adicional</label><br>                    
+                    <input type="text" placeholder="Detalles adicionales" id="Input3" name="Input3"><br><br>
+                    <!--Dirección de entrega-->
+                    <label class="negritas" for="Dirección">Dirección de entrega</label><br>                    
+                    <input type="text" placeholder="Ingresa tu dirección" id="Input2" name="Input2"><br><br>
+                    <!--fecha de entrega-->
+                    <label class="negritas" for="fecha1">Fecha de entrega</label><br>
+                    <input type="date" id="fecha1" name="fecha1"><br><br>
+                    <!--Enviar pedido-->
+                    <input type="button" id="Pedir1" name="Pedir1" value="Enviar pedido" onclick="alert('Se ha enviado el pedido');"><br><br>
+                    <input type="reset"><br>
+                                       
+                </div>
+                
+            </form> 
+        </article> 
+
+        <footer>
+            <table align="center">
+                <tr>                        
+                    <td>Calle del Panadero 14, Col. Molinos, CDMX</td> <br>
+                </tr>
+                <tr>
+                    <td> Tel. (55) 1234 1234</td>
+                </tr>
+                <tr>
+                    <td> Lunes a Sábado <br>
+                    9:00am a 8:00pm</td>
+                </tr>        
+        </table>
+        </footer>
+    </section>
+
+    
+
+</body>
+
+</html>
